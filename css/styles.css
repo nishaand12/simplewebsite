@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Colors and Fonts */
+:root {
+    --background-color: #121212;
+    --foreground-color: #ffffff;
+    --button-background: #ffffff;
+    --button-text: #121212;
+    --button-hover-bg: #383838;
+    --button-hover-text: #cccccc;
+    --grid-color: rgba(255, 255, 255, 0.1);
+    --font-geist-sans: 'Arial', sans-serif; /* Replace with actual font if available */
+    --font-geist-mono: 'Courier New', monospace;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--background-color); /* Dark background */
+    color: #e0e0e0; /* Light text */
+    font-family: var(--font-geist-sans);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Dotted Grid Background - only on index.html */
+body.index-page::before {
+    content: "";
+    position: fixed; /* Changed to fixed to ensure it stays during scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: -1;
+}
+
+
+/* Main Content Styling */
+.main-content {
+    padding-top: 70px; /* Space for fixed navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-geist-mono);
+}
+
+.container {
+    padding-top:70px; /* Space for fixed navbar */
+}
+
+/* Buttons Styling */
+.buttons .btn {
+    width: 200px;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons .btn-primary {
+    background-color: #0d6efd;
+    border: none;
+}
+
+.buttons .btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.buttons .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.buttons .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Footer Styling */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #90caf9; /* Light blue links */
+    text-decoration: none; /* Remove default underline */
+}
+
+.footer a:hover {
+    color: #bbdefb; /* Lighter blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .main-content h1 {
+        font-size: 4rem;
+    }
+
+    .main-content p {
+        font-size: 1.5rem;
+    }
+
+    .buttons .btn {
+        width: auto;
+    }
+
+    .buttons .btn + .btn {
+        margin-left: 1rem;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+}

@@ -1,0 +1,1 @@
+Simple HTML templates that enable the terms of service and privacy policy to be displayed on the internet
