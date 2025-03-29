@@ -106,7 +106,7 @@ body.index-page::before {
 
 /* Card Styling */
 .card-body p {
-    font-family: var(--font-geist-sans);
+    font-family: var(--font-geist-sans) !important;
 }
 
 .card-body .card-text,
