@@ -103,6 +103,16 @@ body.index-page::before {
     background-color: #5a6268;
 }
 
+/* Card Styling */
+.card-body .card-text,
+.card-body li {
+    font-family: var(--font-geist-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--foreground-color);
+    opacity: 0.8;
+}
+
 /* Footer Styling */
 .footer {
     padding: 20px 0;
