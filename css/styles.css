@@ -73,6 +73,7 @@ body.index-page::before {
     font-family: var(--font-geist-mono);
 }
 
+
 .container {
     padding-top:70px; /* Space for fixed navbar */
 }
@@ -104,7 +105,7 @@ body.index-page::before {
 }
 
 /* Card Styling */
-.card-body {
+.card-body p {
     font-family: var(--font-geist-sans);
 }
 
